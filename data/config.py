@@ -1,19 +1,19 @@
-# from environs import Env
+from environs import Env
 
-# # environs kutubxonasidan foydalanish
-# env = Env()
-# env.read_env()
 
-# # .env fayl ichidan quyidagilarni o'qiymiz
-# BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
-# ADMINS = env.list("ADMINS")  # adminlar ro'yxati
-# IP = env.str("ip")  # Xosting ip manzili
-#CHANNELS = ["-1001507962338"]
-# 
+env = Env()
+env.read_env()
 
-import os
 
-BOT_TOKEN = str(os.environ.get("BOT_TOKEN"))
-ADMINS = list(os.environ.get("ADMINS"))
-IP = str(os.environ.get("ip"))
-CHANNELS = list(os.environ.get("CHANNELS"))
+BOT_TOKEN = env.str("BOT_TOKEN") 
+ADMINS = env.list("ADMINS") 
+IP = env.str("ip") 
+CHANNELS = ["-1001507962338"]
+
+
+# import os
+
+# BOT_TOKEN = str(os.environ.get("BOT_TOKEN"))
+# ADMINS = list(os.environ.get("ADMINS"))
+# IP = str(os.environ.get("ip"))
+# CHANNELS = list(os.environ.get("CHANNELS"))
